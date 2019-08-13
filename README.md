@@ -71,3 +71,9 @@ structure
 ## Deployment
 The build in the target can be executed on cloud or server hosting platform
 
+## Built With
+- SpringBoot
+- Maven
+
+## Versioning
+Version 1
