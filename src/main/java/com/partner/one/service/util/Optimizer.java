@@ -11,10 +11,14 @@ public class Optimizer {
 
     public static List<CleanResponse> optimizeWorkforce(CleanRequest request) {
         System.out.println(request.toString());
+        //senior cleaner capacity
+        int seniorCap = request.getSenior();
+        //junior cleaner capacity
+        int juniorCap = request.getJunior();
         List<CleanResponse> cleanResponseList = new ArrayList<>();
         //conditions for capacity
         //senior cleaners have more cleaning capacity than junior cleaners
-        if(request.getSenior() < request.getJunior()) {
+        if(seniorCap < juniorCap) {
             //return error response here
             return null;
         }
@@ -36,12 +40,20 @@ public class Optimizer {
             return null;
         }
 
+
         for(int i = 0; i < rooms.size(); i++) {
-             int noOfRooms = rooms.get(i);
-            //assumptions for optimization, at least one senior at every room
+            int noOfRooms = rooms.get(i);
             System.out.println(noOfRooms);
             CleanResponse response = new CleanResponse();
-            int snrRequired = noOfRooms % request.getSenior();
+            //assumptions for optimization, at least one senior at every room
+            int quotient = noOfRooms / seniorCap;
+            int remainder = noOfRooms % seniorCap;
+
+            if(remainder > juniorCap){
+
+            }
+
+            //Assumption 1. If
             cleanResponseList.add(response);
         }
         return cleanResponseList;
