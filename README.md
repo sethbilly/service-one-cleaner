@@ -15,7 +15,7 @@ maven
 ```
 
 ### Running
-Clone folder and run maven in the root of the directory. A step by step
+Clone or download repository and run maven in the root of the directory. A step by step
 series of actions that tell you how to get project running.
 
 ```
@@ -51,7 +51,9 @@ Input:
 - array of rooms (int) for every structure
 - cleaning capacity Junior Cleaner (int)
 - cleaning capacity Senior Cleaner (int)
-######*sample request*
+
+*sample request*
+
 *{
   "rooms": [35, 21, 17, 28],
   "senior": 10,
@@ -60,10 +62,13 @@ Input:
 ```
 curl -d '{"rooms": [35, 21, 17, 28],"senior": 10,"junior": 6}' -H "Content-Type: application/json" -X POST http://localhost:8080/optimize
 ```
-######*sample response*
+
+*sample response*
+
 Output:
 - array of maps which include the optimal number of Juniors and Seniors for ever
 structure
+
 *{
     {senior: 3, junior: 1}, 
     {senior: 1, junior: 2}, 
