@@ -10,12 +10,12 @@ import java.util.List;
 @RestController
 public class OptimizerController {
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String index() {
         return "Hello Welcome to Server Partner One Cleaner Optimizer";
     }
 
-    @RequestMapping(value = "/optimize", method = RequestMethod.POST)
+    @PostMapping("/optimize")
     public List<CleanResponse> optimize(@RequestBody CleanRequest request) {
         return Optimizer.optimizeWorkforce(request);
     }

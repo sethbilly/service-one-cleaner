@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running
 on your local machine for development, testing and even to production.
 
 ### Prerequisites
-You need to install the following
+You need to install the following and to system paths.
 ```
 jdk8
 maven
@@ -19,15 +19,18 @@ Clone folder and run maven in the root of the directory. A step by step
 series of actions that tell you how to get project running.
 
 ```
-root_directory > mvn package
+project_root_directory > mvn clean
+```
+```
+project_root_directory > mvn package
 ```
 Compiles and builds classes and resources into jar file. A target folder 
 is generated containing the build.
-#### windows
+##### windows platform
 ```
 project_root_directory > java -jar \target\spo-cleaner-1.0.jar
 ```
-#### unix 
+##### unix platform
 ```
 project_root_directory > java -jar /target/spo-cleaner-1.0.jar
 ```
@@ -68,12 +71,18 @@ structure
     {senior: 1, junior: 3}
 }*
 
+Run tests to assert the outputs for the sample inputs above.
+```
+project_root_directory > mvn clean test sprint-boot:run
+```
+
 ## Deployment
-The build in the target can be executed on cloud or server hosting platform
+The build in the target folder can be executed on cloud or server hosting platform
 
 ## Built With
 - SpringBoot
 - Maven
+- Java8
 
 ## Versioning
 Version 1
