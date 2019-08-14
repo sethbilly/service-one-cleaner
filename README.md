@@ -14,7 +14,7 @@ jdk8
 maven
 ```
 
-### Installing
+### Running
 Clone folder and run maven in the root of the directory. A step by step
 series of actions that tell you how to get project running.
 
